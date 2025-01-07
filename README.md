@@ -4,7 +4,7 @@ Standard Coupling Matrix Synthesis Code
 请运行主函数：  
 1. GChebyshevFilterMain.m（无耗广义切比雪夫滤波器耦合矩阵综合）  
 2. LossyFilterMain.m（基于广义切比雪夫滤波器的有耗滤波器耦合矩阵综合）
-3. PredistortionFilterMain.m（预失真滤波器耦合矩阵综合）
+3. PredistortionFilterMain.m（预失真滤波器耦合矩阵综合）  
 子函数说明：  
 1. General_Chebyshev.m（广义切比雪夫滤波函数的综合）
 2. Cheby2EPF.m（广义切比雪夫滤波器对应特征多项式的综合）
