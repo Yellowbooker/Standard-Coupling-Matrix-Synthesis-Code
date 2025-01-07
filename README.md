@@ -3,7 +3,8 @@ Standard Coupling Matrix Synthesis Code
 标准化耦合矩阵综合代码：包含广义切比雪夫滤波器耦合矩阵综合与矩阵旋转（折叠型、箭型、级联CTCQ型）代码以及基于广义切比雪夫滤波器的有耗滤波器耦合矩阵综合代码  
 请运行主函数：  
 1. GChebyshevFilterMain.m（无耗广义切比雪夫滤波器耦合矩阵综合）  
-2. LossyFilterMain.m（基于广义切比雪夫滤波器的有耗滤波器耦合矩阵综合）  
+2. LossyFilterMain.m（基于广义切比雪夫滤波器的有耗滤波器耦合矩阵综合）
+3. PredistortionFilterMain.m（预失真滤波器耦合矩阵综合）
 子函数说明：  
 1. General_Chebyshev.m（广义切比雪夫滤波函数的综合）
 2. Cheby2EPF.m（广义切比雪夫滤波器对应特征多项式的综合）
@@ -19,3 +20,5 @@ Standard Coupling Matrix Synthesis Code
 12. LossyCM2PCP.m（有耗滤波器横向耦合矩阵至并联双耦合谐振器耦合矩阵）
 13. LossDistribution.m（有耗滤波器并联双耦合谐振器耦合矩阵的损耗重新分配，双耦合谐振器的Q值一致）
 14. residue2.m
+15. Predistortion.m（标准预失真滤波函数综合，所有极点实部同时平移相同距离）
+16. AdaptivePredistortion.m（自适应预失真滤波函数综合，所有极点实部同时平移不同距离，距离由优化目标决定）
