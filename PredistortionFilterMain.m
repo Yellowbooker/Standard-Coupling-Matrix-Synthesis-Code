@@ -15,7 +15,7 @@ Tz = [-1.0912i 1.0912i -1.605389i 1.605389i 0.6173+0.34881i -0.6173+0.34881i...
 Tz = Tz/1i; % in w-domain
 RL = 22; % RL level within the passband
 
-Q = 3000; % Q of the resonators
+Q = 2000; % Q of the resonators
 FBW = 0.01;
 % alpha = 1/FBW/Q;
 effectiveQ = 20000;
@@ -89,3 +89,4 @@ set(gca,'FontSize',18);
 set(gca,'linewidth',1.2);
 ylim([-5,0]);
 grid on
+
