@@ -1,7 +1,7 @@
 # Standard-Coupling-Matrix-Synthesis-Code
 Standard Coupling Matrix Synthesis Code  
 标准化耦合矩阵综合代码：包含广义切比雪夫滤波器耦合矩阵综合与矩阵旋转（折叠型、箭型、级联CTCQ型）代码以及基于广义切比雪夫滤波器的有耗滤波器耦合矩阵综合代码  
-2025-11-24，更新六阶拓展盒型、盒型、M13=0/M24=0/M13=M24三型CQ等拓扑结构的耦合矩阵的变换方法，添加三种子函数：Box6dExtract、BoxExtract、CQExtract  
+2025-11-24，更新六阶拓展盒型、盒型、M13=0/M24=0/M13=M24三型CQ等拓扑结构的耦合矩阵变换方法，添加三种子函数：Box6dExtract、BoxExtract、CQExtract  
 请运行主函数：  
 1. GChebyshevFilterMain.m（无耗广义切比雪夫滤波器耦合矩阵综合）  
 2. LossyFilterMain.m（基于广义切比雪夫滤波器的有耗滤波器耦合矩阵综合）
