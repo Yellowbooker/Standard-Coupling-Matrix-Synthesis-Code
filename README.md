@@ -17,7 +17,7 @@ Standard Coupling Matrix Synthesis Code
 7. Rotate.m（对耦合矩阵进行一次旋转，消去特定位置的矩阵元素）
 8. to_foldedCM.m（旋转至折叠型耦合矩阵，顺次耦合为正，模值小于0.0001的元素置零）
 9. CM2arrow.m（旋转至箭型耦合矩阵）
-10. TriExtract.m（从箭型耦合矩阵中提取出CT结构，两个CT结构可转换为一个CQ结构）
+10. CTExtract.m（从箭型耦合矩阵中提取出CT结构，两个CT结构可转换为一个CQ结构）
 11. CMFC_Response.m（计算耦合矩阵对应的S参数）
 12. LossyCM2PCP.m（有耗滤波器横向耦合矩阵至并联双耦合谐振器耦合矩阵）
 13. LossDistribution.m（有耗滤波器并联双耦合谐振器耦合矩阵的损耗重新分配，双耦合谐振器的Q值一致）
