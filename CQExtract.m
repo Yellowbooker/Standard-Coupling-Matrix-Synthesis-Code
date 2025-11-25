@@ -2,7 +2,7 @@
 
 function M2 = CQExtract(M1, Tz, Pull, opt)
 
-% CQExtract aims to transform the CT-type matrix to the CQ-type
+% CQExtract aims to transform the arrow-type matrix to the CQ-type
 % coupling matrix.
 % Pull is the distance the CQ section moves toward the S port.
 % opt = '13'(M24 = 0) or '24'(M13 = 0) or 'equal'(M13 = M24) to switch
@@ -41,6 +41,7 @@ if strcmp(opt, 'equal') == 1
     R(N-Pull+1, N-Pull) = sin(theta_r);
     M2 = R*M2*R.';
 end
+
 
 
 end
