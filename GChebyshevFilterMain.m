@@ -64,41 +64,10 @@ C(N+2,N+2) = 0;
 % CM = to_foldedCM(N,M_trans);
 CM = CM2arrow(M_trans);
 % CM = BoxExtract(CM,Tz(1)*1i,3);
-% CM = BoxExtract(CM,Tz(2)*1i,0);
-% CM = TriExtract(CM,Tz(1)*1i,2);
-% CM = TriExtract(CM,Tz(2)*1i,1);
+% CM = CTExtract(CM,Tz(1)*1i,2);
+% CM = CTExtract(CM,Tz(2)*1i,1);
 CM = CQExtract(CM, [Tz(1),Tz(end)], 7, '13');
-% [1,2]
-% R = eye(N+2,N+2);
-% theta_r = atan((CM(3, 5)-CM(4, 6))/(CM(4, 5) + CM(3, 6)));
-% R(3, 3) = cos(theta_r);
-% R(4, 4) = cos(theta_r);
-% R(3, 4) = -sin(theta_r);
-% R(4, 3) = sin(theta_r);
-% CM = R*CM*R.';
-% [2,3]
-% R = eye(N+2,N+2);
-% theta_r = atan((CM(4, 6)-CM(3, 5))/(CM(3, 4) + CM(5, 6)));
-% R(4, 4) = cos(theta_r);
-% R(5, 5) = cos(theta_r);
-% R(4, 5) = -sin(theta_r);
-% R(5, 4) = sin(theta_r);
-% CM = R*CM*R.';
-% theta1 = [0:0.01:360];
-% for i = 1:length(theta1)
-%     CM1(:,:,i) = CQ2EBox6(CM,theta1(i));
-% end
-% M36 = abs(CM1(3,6,:));
-% CM = CQExtract(CM, Tz, 4, '24');
-% CM = CQ2EBox6(CM,0.463/180*pi);
-% CM = CQ2EBox6(CM,136.53/180*pi);
-% CM = CQ2EBox6(CM,58.82/180*pi);
-% CM = CQ2EBox6(CM,85.43/180*pi);
-% CM = CQ2EBox6(CM,136.6/180*pi);
-% CM = CQ2EBox6(CM,180.462/180*pi); %=0.463
-% CM = CQ2EBox6(CM,238.8/180*pi); %=58.82
-% CM = CQ2EBox6(CM,265.4/180*pi); %=85.43
-% CM = CQ2EBox6(CM,316.6/180*pi); %=136.6
+
 Pull = 2;
 [~,Bx6CM] = Box6dExtract(CM, [Tz(2),Tz(3)], Pull);
 k = 0;
@@ -124,3 +93,4 @@ set(gca,'FontSize',18);
 set(gca,'linewidth',1.2);
 ylim([-100,0]);
 grid on
+
