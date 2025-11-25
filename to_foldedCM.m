@@ -1,8 +1,6 @@
 function foldedCM=to_foldedCM(N,M)
 
 % It is a function to tranfrom the transversal matrix to the folded matrix.
-% This code including the normalized operation to make sure all of the 
-% main-coupling are positive.
 % By YB 
 % Date: 2024-04-14
 
@@ -37,21 +35,6 @@ function foldedCM=to_foldedCM(N,M)
                 R(k,m)=-sin(theta);
                 R(m,k)=-R(k,m);
                 M=R*M*R.';
-            end
-        end
-    end
-    % normalized operation
-    for i = 1:N-1
-        if real(M(i,i+1)) < 0
-            R = eye(N,N);
-            R(i+1,i+1) = -1;
-            M = R*M*R.';
-        end
-    end
-    for i = 1:N
-        for j = 1:N
-            if abs(M(i,j)) < 1e-4
-                M(i,j) = 0;
             end
         end
     end
