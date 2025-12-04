@@ -72,7 +72,7 @@ Pull = 2;
 [~,Bx6CM] = Box6dExtract(CM, [Tz(2),Tz(3)], Pull);
 k = 0;
 for i = 1:size(Bx6CM,3)
-    if abs(Bx6CM(N-Pull-1,N-Pull+2,i)) < 1e-2
+    if abs(Bx6CM(N-Pull-1,N-Pull+2,i)) < 1e-3
         k = k + 1;
         Bx6CMs(:,:,k) = NormalizeCM(Bx6CM(:,:,i));
     end
@@ -93,4 +93,5 @@ set(gca,'FontSize',18);
 set(gca,'linewidth',1.2);
 ylim([-100,0]);
 grid on
+
 
