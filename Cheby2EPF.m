@@ -29,9 +29,11 @@ if NTz == N
 else
     Filter.epsilonR = 1;
 end
-Ew2 = conv(Pw,Pw)/(Filter.epsilon*Filter.epsilon) + ...
-    conv(Fw,Fw)/(Filter.epsilonR*Filter.epsilonR);
-RootE = roots(Ew2);
+% Ew2 = conv(Pw,Pw)/(Filter.epsilon*Filter.epsilon) + ...
+%     conv(Fw,Fw)/(Filter.epsilonR*Filter.epsilonR);
+
+REw2 = roots(1i*Pw/Filter.epsilon + Fw/Filter.epsilonR);
+RootE = [REw2, conj(REw2)];
 RootE = RootE(imag(RootE) > 0);
 Ew = poly(RootE);
 
